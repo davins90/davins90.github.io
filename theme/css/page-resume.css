@@ -1,0 +1,9 @@
+div.page img.align-left {
+  float: left;
+  margin: 0 2rem 0 0;
+}
+
+div.page img.align-right {
+  float: right;
+  margin: 0 0 0 2rem;
+}
