@@ -1,5 +1,7 @@
 Title: Résumé
 
+<sub><sup>Downloadable pdf version link at the bottom of the page</sup></sub>
+
 Employment
 ---------
 
@@ -126,4 +128,4 @@ Contact
 
 &#128231; : daniele.davino@live.it
 
-Click here for a pdf version of my CV!
+[Click here](/pdf/daniele_davino_CV.pdf) for a pdf version of my CV!

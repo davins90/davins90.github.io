@@ -59,7 +59,7 @@ DIRECT_TEMPLATES = ['blog']
 PAGINATED_DIRECT_TEMPLATES = ['blog']
 
 # Static files
-STATIC_PATHS = ['extra','images']
+STATIC_PATHS = ['extra','images','pdf']
 EXTRA_PATH_METADATA = {'extra/favicon.ico': {'path': 'favicon.ico'},
                               'extra/robots.txt':{'path': 'robots.txt'}}
 
