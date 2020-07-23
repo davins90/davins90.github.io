@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Metadata -->
+	<meta name="description" content="This is my tutorial on how I built this blog with Pelican.">
+	<meta property="og:description" content="This is my tutorial on how I built this blog with Pelican.">
+	<meta property="og:title" content="How to create a blog with Pelican? (Part 1)" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="/2020/06/28/how-to-create-a-blog-with-pelican-part-1/" />
+		<meta property="og:image" content="/images/avatar.png" />
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Daniele D'Avino</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="/theme/css/poole.css" />
+		<link rel="stylesheet" href="/theme/css/hyde.css" />
+		<link rel="stylesheet" href="/theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css">
+
+		<!-- RSS -->
+
+		<!-- Analytics -->
+	</head>
+
+	<body class="theme-base-me">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="/images/avatar.png">
+					Daniele D'Avino
+				</a>
+			</h1>
+			<p class="lead">Financial Data Scientist @ Virtual B </p>
+			<p></p>
+		</div>
+		<nav class="sidebar-nav">
+				<ul class="sidebar-nav-pages">
+					<li><a href="/pages/projects/">Projects</a></li>
+					<li><a href="/pages/resume/">Résumé</a></li>
+					<li><a href="/blog.html">Blog</a></li>
+				</ul>
+
+					<a class="sidebar-nav-item" href="mailto:daniele.davino@live.it">
+						<i class="fa fa-envelope"></i>
+					</a>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/daniele-d-avino-a2678354">
+						<i class="fa fa-linkedin"></i>
+					</a>
+					<a class="sidebar-nav-item" href="https://twitter.com/DAvinoDaniele">
+						<i class="fa fa-twitter"></i>
+					</a>
+					<a class="sidebar-nav-item" href="https://github.com/davins90">
+						<i class="fa fa-github"></i>
+					</a>
+		</nav>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">How to create a blog with Pelican? (Part 1)</h1>
+	<span class="post-date">dom 28 giugno 2020</span>
+	<p>This is my tutorial on how I built this blog with Pelican.
+</p>
+<h1>Introduction</h1>
+<p>With modern technological tools it is becoming increasingly easy to build your own web identity that is not only linked to the world of social networks. 
+In this post we will see how to build a blog using <a href="https://blog.getpelican.com/">Pelican</a>, a way to build static websites based on Python, one of the most popular languages of the moment. </p>
+<p>Building it will be the first step, making it operational will be the second, and for this goal we make use of the possibilities offered by <a href="https://github.com/">GitHub</a>, the most known code-repository that allows to host for each user its own web page. </p>
+<p>The purpose?
+From creating an alternative Curriculum Vitae, to telling and spreading examples of work, projects or simple tutorials, like this one. Let's get started with the first step!</p>
+<h1>The building process</h1>
+<p>The entire process can be conveniently performed from the command prompt.</p>
+<ol>
+<li>We create an empty folder, where (if desired) we create a virtual environment and activate it. </li>
+<li>Following the instructions of the useful <a href="https://docs.getpelican.com/en/stable/index.html">Pelican documentation</a>, we install the useful packages for the construction phase:
+    &gt; pip install pelican[Markdown]</li>
+<li>
+<p>When installation is complete, run the following command:
+    &gt; pelican-quickstart</p>
+<p>This will launch Pelican's wizard to create a first "skeleton" of the site, requesting basic information (site name, author, time zone, etc...). For further information the previous documentation is very exhaustive.</p>
+</li>
+</ol>
+<h3>Let's take a break.</h3>
+<p>At this point a first structure of the site is built. If you are curious to see a first result, here are the steps.
+- a. From the prompt run the following command:
+    &gt; pelican path to the "content" folder --&gt; pelican C:\Users... \content
+- b. Wait a few seconds and the prompt will return the message that the site has been correctly uploaded. At this point, to see it working on your browser (but locally, only on your PC's IP address), run the following command:
+    &gt; pelica --listen</p>
+<div class="highlight"><pre><span></span><span class="k">At</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8000</span><span class="o">/</span> <span class="n">you</span> <span class="n">will</span> <span class="k">get</span> <span class="n">the</span> <span class="k">result</span> <span class="p">(</span><span class="n">very</span> <span class="n">primordial</span> <span class="n">but</span> <span class="n">still</span> <span class="n">a</span> <span class="k">result</span><span class="p">).</span>
+</pre></div>
+
+
+<h3>Do you want to start customizing?</h3>
+<p>Let's create a first example article!
+- c. Let's enter in the "content" folder and create a folder that we will call "pages" .
+- d. Inside this folder we create a "Markdown" file. The documentation details this process well.
+- e. We repeat the procedure from point a... and here is also our first published example article!</p>
+<h2>Let's resume the construction</h2>
+<ol>
+<li>
+<p>Pelican offers many customization possibilities, and these two are essentials in my opinion: <a href="https://github.com/getpelican/pelican-themes">themes</a> and <a href="https://github.com/getpelican/pelican-plugins">plug-ins</a>. For both of them I suggest to create a folder with a proper name in which to copy the respective github repository, using the command:
+    &gt; git clone https:...theme or plug link</p>
+<p>In this way we will have all possible alternatives to try. But how to try?
+2. If both themes and plug-ins must be specified in the python file "pelicanconf.py" with their respective paths, trying a theme (more than a plug-in) is possible via the following command:</p>
+<blockquote>
+<p>pelican content -s pelicanconf.py -t /path to the theme you want to try...
+3. Then launched pelican --listen you can see your site with the new "dress".</p>
+</blockquote>
+</li>
+</ol>
+<p>After choosing the theme you prefer, the useful plug-ins, writing the first presentation articles... you can say that the site is ready to be published!
+For this step I refer you to Part 2 of this post, where will be explained the process of uploading to GitHub the site now built.</p>
+<p>I know I've been a bit concise in this tutorial, but for further details I suggest you to read <a href="https://docs.getpelican.com/en/stable/index.html">Pelican's well done documentation</a>, which will explain in detail the steps I might have overlooked!</p>
+<h1>The end</h1>
+<p>Thank you for your attention, that's all for today! See you at the next post! :) </p>
+<p>For information please do not hesitate to contact me: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#97;&#110;&#105;&#101;&#108;&#101;&#46;&#100;&#97;&#118;&#105;&#110;&#111;&#64;&#108;&#105;&#118;&#101;&#46;&#105;&#116;">&#100;&#97;&#110;&#105;&#101;&#108;&#101;&#46;&#100;&#97;&#118;&#105;&#110;&#111;&#64;&#108;&#105;&#118;&#101;&#46;&#105;&#116;</a></p>
+</div>
+			<div class="footer">
+				<p>&copy; 2015-2020 Daniele D'Avino &bull; Built using <a href="https://blog.getpelican.com/" target="_blank">Pelican</a> &bull; Source available on <a href="">GitHub</a></p>
+			</div>
+		</div>
+	</body>
+</html>
