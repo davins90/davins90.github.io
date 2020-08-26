@@ -77,34 +77,73 @@
 <h1>Introduction</h1>
 <p>In the previous article (Part 1) we've seen how to build a website, now it's time to publish it! Let's start!</p>
 <h1>The publishing process</h1>
-<p>The publication process consists of two phases:
-1. the first online publication;
-2. the second, third, etc.. publication based on updates, new posts and so on.</p>
-<h2>The first step</h2>
-<p>For the first online publication it is useful to follow this procedure.
-1. Create a totally empty repository on your GitHub page (without README).
-2. Copy the empty repository locally with the command:
-    &gt; git clone https:...
-3. For a better usability of GitHub it is advisable at this point to create a branch that we will call "content". In this branch we're going to load the whole structure of the site, the theme, the plug-ins, etc.. . The code to launch is as follows:
-    &gt; git checkout -b content</p>
-<div class="highlight"><pre><span></span><span class="k">In</span> <span class="n">this</span> <span class="n">way</span> <span class="n">the</span> <span class="n">empty</span> <span class="n">folder</span> <span class="n">will</span> <span class="n">be</span> <span class="n">inside</span> <span class="n">the</span> <span class="ss">&quot;content&quot;</span> <span class="n">branch</span> <span class="n">now</span> <span class="n">created</span><span class="p">.</span>
-</pre></div>
-
-
+<p>The publication process consists of two phases:</p>
 <ol>
-<li>At this point I copy all files and folders created in the article Part 1, except the output folder. This is because I'm working inside the branch and the output folder will be generated not in the branch but in the "master".</li>
-<li>I report this operation to GitHub with the following command:
-    &gt; git commit - m "message reporting the change".</li>
-<li>I confirm the operation carried out with:
-    &gt; git push origin content</li>
-<li>At this point I run the Pelican command that allows me to generate the Output folder:
-    &gt; pelican ... \content</li>
-<li>For the final steps you need to install the following library, as suggested in Pelican's documentation:
-    &gt; pip install ghp-import</li>
-<li>With the library installed above I move the Outpur folder from the branch to the master folder:
-    &gt; ghp-import -m "son-in-law output" - b master output</li>
-<li>I confirm with:
-    &gt; git push origin master</li>
+<li>
+<p>the first online publication;</p>
+</li>
+<li>
+<p>the second, third, etc.. publication based on updates, new posts and so on.</p>
+</li>
+</ol>
+<h2>The first step</h2>
+<p>For the first online publication it is useful to follow this procedure.</p>
+<ol>
+<li>
+<p>Create a totally empty repository on your GitHub page (without README).</p>
+</li>
+<li>
+<p>Copy the empty repository locally with the command:</p>
+<blockquote>
+<p>git clone https:...</p>
+</blockquote>
+</li>
+<li>
+<p>For a better usability of GitHub it is advisable at this point to create a branch that we will call "content". In this branch we're going to load the whole structure of the site, the theme, the plug-ins, etc.. . The code to launch is as follows:</p>
+<blockquote>
+<p>git checkout -b content</p>
+</blockquote>
+<p>In this way the empty folder will be inside the "content" branch now created.</p>
+</li>
+<li>
+<p>At this point I copy all files and folders created in the article Part 1, except the output folder. This is because I'm working inside the branch and the output folder will be generated not in the branch but in the "master".</p>
+</li>
+<li>
+<p>I report this operation to GitHub with the following command:</p>
+<blockquote>
+<p>git commit - m "message reporting the change".</p>
+</blockquote>
+</li>
+<li>
+<p>I confirm the operation carried out with:</p>
+<blockquote>
+<p>git push origin content</p>
+</blockquote>
+</li>
+<li>
+<p>At this point I run the Pelican command that allows me to generate the Output folder:</p>
+<blockquote>
+<p>pelican ... \content</p>
+</blockquote>
+</li>
+<li>
+<p>For the final steps you need to install the following library, as suggested in Pelican's documentation:</p>
+<blockquote>
+<p>pip install ghp-import</p>
+</blockquote>
+</li>
+<li>
+<p>With the library installed above I move the Outpur folder from the branch to the master folder:</p>
+<blockquote>
+<p>ghp-import -m "son-in-law output" - b master output</p>
+</blockquote>
+</li>
+<li>
+<p>I confirm with:</p>
+<blockquote>
+<p>git push origin master</p>
+</blockquote>
+</li>
 </ol>
 <p>At this point the folder on GitHub is ready for publication: check the settings of the created folder and the official link will be available at the bottom of the page! As usual, the <a href="https://docs.getpelican.com/en/stable/tips.html#publishing-to-github">Pelican documentation page</a> is super useful.</p>
 <p>To add a custom domain you need to set the GitHub ports on the DNS of the domain (bought for example on Google Domains) so that the link now generated is "nicknamed" with the name of the bought domain. This will be the subject of a future post. 

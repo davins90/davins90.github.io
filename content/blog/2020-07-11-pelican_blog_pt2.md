@@ -32,6 +32,8 @@ For the first online publication it is useful to follow this procedure.
 
 4. At this point I copy all files and folders created in the article Part 1, except the output folder. This is because I'm working inside the branch and the output folder will be generated not in the branch but in the "master".
 
+    > git add .
+
 5. I report this operation to GitHub with the following command:
 
     > git commit - m "message reporting the change".
@@ -48,9 +50,9 @@ For the first online publication it is useful to follow this procedure.
 
     > pip install ghp-import
 
-9. With the library installed above I move the Outpur folder from the branch to the master folder:
+9.  With the library installed above I move the Outpur folder from the branch to the master folder:
 
-    > ghp-import -m "son-in-law output" - b master output
+    > ghp-import -m "message" - b master output
 
 10. I confirm with:
 
