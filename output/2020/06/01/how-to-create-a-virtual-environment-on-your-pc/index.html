@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Metadata -->
+	<meta name="description" content="In this post I try to describe the steps useful to create a virtual environment on your machine.">
+	<meta property="og:description" content="In this post I try to describe the steps useful to create a virtual environment on your machine.">
+	<meta property="og:title" content="How to create a virtual environment on your PC" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="/2020/06/01/how-to-create-a-virtual-environment-on-your-pc/" />
+		<meta property="og:image" content="/images/avatar.png" />
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Daniele D'Avino</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="/theme/css/poole.css" />
+		<link rel="stylesheet" href="/theme/css/hyde.css" />
+		<link rel="stylesheet" href="/theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css">
+
+		<!-- RSS -->
+
+		<!-- Analytics -->
+	</head>
+
+	<body class="theme-base-me">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="/images/avatar.png">
+					Daniele D'Avino
+				</a>
+			</h1>
+			<p class="lead">Financial Data Scientist @ Virtual B </p>
+			<p></p>
+		</div>
+		<nav class="sidebar-nav">
+				<ul class="sidebar-nav-pages">
+					<li><a href="/pages/projects/">Projects</a></li>
+					<li><a href="/pages/resume/">Résumé</a></li>
+					<li><a href="/blog.html">Blog</a></li>
+				</ul>
+
+					<a class="sidebar-nav-item" href="mailto:daniele.davino@live.it">
+						<i class="fa fa-envelope"></i>
+					</a>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/daniele-d-avino-a2678354">
+						<i class="fa fa-linkedin"></i>
+					</a>
+					<a class="sidebar-nav-item" href="https://twitter.com/DAvinoDaniele">
+						<i class="fa fa-twitter"></i>
+					</a>
+					<a class="sidebar-nav-item" href="https://github.com/davins90">
+						<i class="fa fa-github"></i>
+					</a>
+		</nav>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">How to create a virtual environment on your PC</h1>
+	<span class="post-date">lun 01 giugno 2020</span>
+	<p>In this post I try to describe the steps useful to create a virtual environment on your machine.
+</p>
+<h1>Why a virtual environment?</h1>
+<p>A virtual environment is useful in case you want to try particular libraries and extensions of a particular programming language (eg Python), without having to worry about creating conflicts with previous (or later) versions already installed on your machine. </p>
+<p>For example: the XY library only works with version 3.0 of the Z tool, but you have version 4.0 installed on your PC. To avoid creating conflicts by uninstalling the current version, creating a virtual environment is the ideal solution!</p>
+<h1>The procedure</h1>
+<p>These steps can be performed comfortably via command prompts. Let's get started!</p>
+<ol>
+<li>
+<p>First of all you need to install the package that allows the creation of a virtual environment. This is possible by running the following code: 
+    &gt; pip install virtualenv</p>
+<p>More information about this package at the following <a href="https://pypi.org/project/virtualenv/">link</a>.
+2. Through the command prompt you move to the folder of your interest, where you want to create your "virtual world".
+3. At this point we can create our virtual environment, which we will call "env", using the following command (always from prompt):</p>
+<blockquote>
+<p>virtualenv env
+4. After this operation, an additional folder named "env" will be created in the folder where we are located. Let's go inside:
+cd env
+5. Inside env, we enter the "Scripts" folder.
+cd Scripts
+6. Using the tab key on the keyboard we can scroll from the prompt the contents of the Scripts folder. Among the present files we have to search "<strong>activate</strong>", press enter... and our virtual world is created! Here we don't have to worry about creating conflicts!
+7. Once we have finished our work and we want to return to the "real world", outside our virtual environment, just search inside "Scripts" for the "<strong>deactivate</strong>" command and press enter. This will bring us back to the "reality" of our machine.</p>
+</blockquote>
+</li>
+</ol>
+<h1>The end</h1>
+<p>Thank you for your attention, that's all for today! See you at the next post! :) </p>
+<p>For information please do not hesitate to contact me: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#97;&#110;&#105;&#101;&#108;&#101;&#46;&#100;&#97;&#118;&#105;&#110;&#111;&#64;&#108;&#105;&#118;&#101;&#46;&#105;&#116;">&#100;&#97;&#110;&#105;&#101;&#108;&#101;&#46;&#100;&#97;&#118;&#105;&#110;&#111;&#64;&#108;&#105;&#118;&#101;&#46;&#105;&#116;</a></p>
+</div>
+			<div class="footer">
+				<p>&copy; 2015-2020 Daniele D'Avino &bull; Built using <a href="https://blog.getpelican.com/" target="_blank">Pelican</a> &bull; Source available on <a href="">GitHub</a></p>
+			</div>
+		</div>
+	</body>
+</html>

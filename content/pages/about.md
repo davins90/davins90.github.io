@@ -24,7 +24,7 @@ Bayes permitting, this trip... continue!
 
 | | | |
 | --- | --- | --- |
-| <i class="fa fa-envelope"></i> | Email | <mailto:dainele.davino@live.it> |
+| <i class="fa fa-envelope"></i> | Email | <mailto:daniele.davino@live.it> |
 
 ### Résumé
 

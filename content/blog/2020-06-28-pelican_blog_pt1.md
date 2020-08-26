@@ -24,29 +24,42 @@ The entire process can be conveniently performed from the command prompt.
 
     This will launch Pelican's wizard to create a first "skeleton" of the site, requesting basic information (site name, author, time zone, etc...). For further information the previous documentation is very exhaustive.
 
-### Let's take a break.
+### Let's take a break
 
 At this point a first structure of the site is built. If you are curious to see a first result, here are the steps.
+
 - a. From the prompt run the following command:
+
     > pelican path to the "content" folder --> pelican C:\Users... \content
+
 - b. Wait a few seconds and the prompt will return the message that the site has been correctly uploaded. At this point, to see it working on your browser (but locally, only on your PC's IP address), run the following command:
+
     > pelica --listen
 
     At http://localhost:8000/ you will get the result (very primordial but still a result).
 
 ### Do you want to start customizing? 
+
 Let's create a first example article!
+
 - c. Let's enter in the "content" folder and create a folder that we will call "pages" .
+
 - d. Inside this folder we create a "Markdown" file. The documentation details this process well.
+
 - e. We repeat the procedure from point a... and here is also our first published example article!
 
 ## Let's resume the construction
+
 1. Pelican offers many customization possibilities, and these two are essentials in my opinion: [themes](https://github.com/getpelican/pelican-themes) and [plug-ins](https://github.com/getpelican/pelican-plugins). For both of them I suggest to create a folder with a proper name in which to copy the respective github repository, using the command:
+
     > git clone https:\...theme or plug link
 
     In this way we will have all possible alternatives to try. But how to try?
+
 2. If both themes and plug-ins must be specified in the python file "pelicanconf.py" with their respective paths, trying a theme (more than a plug-in) is possible via the following command:
+
     > pelican content -s pelicanconf.py -t /path to the theme you want to try...
+
 3. Then launched pelican --listen you can see your site with the new "dress".
 
 After choosing the theme you prefer, the useful plug-ins, writing the first presentation articles... you can say that the site is ready to be published!
