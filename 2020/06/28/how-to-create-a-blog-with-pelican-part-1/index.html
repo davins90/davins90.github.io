@@ -92,32 +92,53 @@ From creating an alternative Curriculum Vitae, to telling and spreading examples
 <p>This will launch Pelican's wizard to create a first "skeleton" of the site, requesting basic information (site name, author, time zone, etc...). For further information the previous documentation is very exhaustive.</p>
 </li>
 </ol>
-<h3>Let's take a break.</h3>
-<p>At this point a first structure of the site is built. If you are curious to see a first result, here are the steps.
-- a. From the prompt run the following command:
-    &gt; pelican path to the "content" folder --&gt; pelican C:\Users... \content
-- b. Wait a few seconds and the prompt will return the message that the site has been correctly uploaded. At this point, to see it working on your browser (but locally, only on your PC's IP address), run the following command:
-    &gt; pelica --listen</p>
-<div class="highlight"><pre><span></span><span class="k">At</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8000</span><span class="o">/</span> <span class="n">you</span> <span class="n">will</span> <span class="k">get</span> <span class="n">the</span> <span class="k">result</span> <span class="p">(</span><span class="n">very</span> <span class="n">primordial</span> <span class="n">but</span> <span class="n">still</span> <span class="n">a</span> <span class="k">result</span><span class="p">).</span>
-</pre></div>
-
-
+<h3>Let's take a break</h3>
+<p>At this point a first structure of the site is built. If you are curious to see a first result, here are the steps.</p>
+<ul>
+<li>
+<p>a. From the prompt run the following command:</p>
+<blockquote>
+<p>pelican path to the "content" folder --&gt; pelican C:\Users... \content</p>
+</blockquote>
+</li>
+<li>
+<p>b. Wait a few seconds and the prompt will return the message that the site has been correctly uploaded. At this point, to see it working on your browser (but locally, only on your PC's IP address), run the following command:</p>
+<blockquote>
+<p>pelica --listen</p>
+</blockquote>
+<p>At http://localhost:8000/ you will get the result (very primordial but still a result).</p>
+</li>
+</ul>
 <h3>Do you want to start customizing?</h3>
-<p>Let's create a first example article!
-- c. Let's enter in the "content" folder and create a folder that we will call "pages" .
-- d. Inside this folder we create a "Markdown" file. The documentation details this process well.
-- e. We repeat the procedure from point a... and here is also our first published example article!</p>
+<p>Let's create a first example article!</p>
+<ul>
+<li>
+<p>c. Let's enter in the "content" folder and create a folder that we will call "pages" .</p>
+</li>
+<li>
+<p>d. Inside this folder we create a "Markdown" file. The documentation details this process well.</p>
+</li>
+<li>
+<p>e. We repeat the procedure from point a... and here is also our first published example article!</p>
+</li>
+</ul>
 <h2>Let's resume the construction</h2>
 <ol>
 <li>
-<p>Pelican offers many customization possibilities, and these two are essentials in my opinion: <a href="https://github.com/getpelican/pelican-themes">themes</a> and <a href="https://github.com/getpelican/pelican-plugins">plug-ins</a>. For both of them I suggest to create a folder with a proper name in which to copy the respective github repository, using the command:
-    &gt; git clone https:...theme or plug link</p>
-<p>In this way we will have all possible alternatives to try. But how to try?
-2. If both themes and plug-ins must be specified in the python file "pelicanconf.py" with their respective paths, trying a theme (more than a plug-in) is possible via the following command:</p>
+<p>Pelican offers many customization possibilities, and these two are essentials in my opinion: <a href="https://github.com/getpelican/pelican-themes">themes</a> and <a href="https://github.com/getpelican/pelican-plugins">plug-ins</a>. For both of them I suggest to create a folder with a proper name in which to copy the respective github repository, using the command:</p>
 <blockquote>
-<p>pelican content -s pelicanconf.py -t /path to the theme you want to try...
-3. Then launched pelican --listen you can see your site with the new "dress".</p>
+<p>git clone https:...theme or plug link</p>
 </blockquote>
+<p>In this way we will have all possible alternatives to try. But how to try?</p>
+</li>
+<li>
+<p>If both themes and plug-ins must be specified in the python file "pelicanconf.py" with their respective paths, trying a theme (more than a plug-in) is possible via the following command:</p>
+<blockquote>
+<p>pelican content -s pelicanconf.py -t /path to the theme you want to try...</p>
+</blockquote>
+</li>
+<li>
+<p>Then launched pelican --listen you can see your site with the new "dress".</p>
 </li>
 </ol>
 <p>After choosing the theme you prefer, the useful plug-ins, writing the first presentation articles... you can say that the site is ready to be published!
