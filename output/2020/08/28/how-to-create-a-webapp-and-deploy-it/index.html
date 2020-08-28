@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+		<!-- Metadata -->
+	<meta name="description" content="This is my tutorial on how to create and publish a webapp written in Python, interfaced with Streamlit and brought online with Heroku.">
+	<meta property="og:description" content="This is my tutorial on how to create and publish a webapp written in Python, interfaced with Streamlit and brought online with Heroku.">
+	<meta property="og:title" content="How to create a webapp and deploy it" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="/2020/08/28/how-to-create-a-webapp-and-deploy-it/" />
+		<meta property="og:image" content="/images/avatar.png" />
+
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+		<title>Daniele D'Avino</title>
+
+		<!-- CSS -->
+		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
+		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
+
+		<link rel="stylesheet" href="/theme/css/poole.css" />
+		<link rel="stylesheet" href="/theme/css/hyde.css" />
+		<link rel="stylesheet" href="/theme/css/syntax.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css">
+
+		<!-- RSS -->
+
+		<!-- Analytics -->
+	</head>
+
+	<body class="theme-base-me">
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+
+			<h1>
+				<a href="/">
+					<img class="profile-picture" src="/images/avatar.png">
+					Daniele D'Avino
+				</a>
+			</h1>
+			<p class="lead">Financial Data Scientist @ Virtual B </p>
+			<p></p>
+		</div>
+		<nav class="sidebar-nav">
+				<ul class="sidebar-nav-pages">
+					<li><a href="/pages/projects/">Projects</a></li>
+					<li><a href="/pages/resume/">Résumé</a></li>
+					<li><a href="/blog.html">Blog</a></li>
+				</ul>
+
+					<a class="sidebar-nav-item" href="mailto:daniele.davino@live.it">
+						<i class="fa fa-envelope"></i>
+					</a>
+					<a class="sidebar-nav-item" href="https://www.linkedin.com/in/daniele-d-avino-a2678354">
+						<i class="fa fa-linkedin"></i>
+					</a>
+					<a class="sidebar-nav-item" href="https://twitter.com/DAvinoDaniele">
+						<i class="fa fa-twitter"></i>
+					</a>
+					<a class="sidebar-nav-item" href="https://github.com/davins90">
+						<i class="fa fa-github"></i>
+					</a>
+		</nav>
+	</div>
+</div>		<div class="content container">
+<div class="post">
+	<h1 class="post-title">How to create a webapp and deploy it</h1>
+	<span class="post-date">ven 28 agosto 2020</span>
+	<p>This is my tutorial on how to create and publish a webapp written in Python, interfaced with Streamlit and brought online with Heroku.
+</p>
+<h1>Introduction</h1>
+<p>Creating algorithms and applications has a precise purpose: to use them outside of your PC. Using them "locally" risks being a big limitation. Hence my need to find a way to bring small applications online, so that they can be used by more people, without having to go through me or my PC.</p>
+<p>To do this you need 3 ingredients: GitHub, Streamlit and Heroku.</p>
+<h1>The process</h1>
+<h2>GitHub</h2>
+<p>First you need to create a folder on your GitHub account with only the README file where we describe the application we are going to create. Once created the folder we can copy it locally with the usual command:</p>
+<blockquote>
+<p>git clone https://... .git</p>
+</blockquote>
+<h2>Streamlit</h2>
+<p>At this point we have to start filling the folder.</p>
+<ul>
+<li>
+<p>We create here the python file of our application. In order to use Streamlit you will simply need to import the library and use some of the many features provided by this framework to create an application interface.</p>
+<blockquote>
+<p>import streamlit as st</p>
+</blockquote>
+</li>
+</ul>
+<p>Now you need to create files useful for future development on Heroku's servers. The files you need are the following:</p>
+<ul>
+<li>
+<p>Procfile . This file (created without extensions) fills it with the following line of code:
+    &gt; web: sh setup.sh &amp;&amp; streamlit NAME-APP.py</p>
+</li>
+<li>
+<p>setup.sh . I create this file with the following lines of code:</p>
+<blockquote>
+<p>mkdir -p ~/.streamlit/
+echo "\
+[server]\n\
+headless = true
+port = $PORT\n\
+enableCORS = false\n\
+\n\
+" &gt; ~/.streamlit/config.toml</p>
+</blockquote>
+</li>
+<li>
+<p>requirements.txt . It is necessary to save all the libraries we use in our application so that heroku can know them and download them to its servers.</p>
+</li>
+</ul>
+<h2>Heroku</h2>
+<p>Now let's move on to the work phase on Heroku. First you need to install Heroku CLI on your PC and create a free account. 
+Once this is done, we can go back to the terminal and complete the necessary steps to bring our application online. Let's get started!</p>
+<ul>
+<li>
+<p>We enter our account from cmd:</p>
+<blockquote>
+<p>Heroku login</p>
+</blockquote>
+</li>
+<li>
+<p>We create our own app (with a name if you want):</p>
+<blockquote>
+<p>heroku create NAME-APP</p>
+</blockquote>
+</li>
+<li>
+<p>We upload previously created files and comment on the operation:</p>
+<blockquote>
+<p>git add .
+git commit -m "first upload"</p>
+</blockquote>
+</li>
+<li>
+<p>We confirm the upload on Heroku:</p>
+<blockquote>
+<p>git push heroku master</p>
+</blockquote>
+</li>
+<li>
+<p>We confirm the upload on our GitHub</p>
+<blockquote>
+<p>git push</p>
+</blockquote>
+</li>
+</ul>
+<p>At this point in the terminal will appear the link of our application that we can use and share.</p>
+<h2>Conclusion</h2>
+<p>As you have read the process is very simple and immediate and in my opinion it is ideal to bring small applications, demos and whatever else online.
+The applications I built with this procedure are the following (you can find their files in my GitHub page):</p>
+<ul>
+<li>
+<p><a href="https://financial-markets-overview.herokuapp.com/">Tool</a> to download the weekly performances of some of the main market indexes.</p>
+</li>
+<li>
+<p><a href="https://check-ao-ptf.herokuapp.com/">Tool</a> to analyze the performance results of the investment portfolios of the AdviseOnly.com website.</p>
+</li>
+</ul>
+<h1>The end</h1>
+<p>Thank you for your attention, that's all for today! See you at the next post! :)</p>
+<p>For information please do not hesitate to contact me: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#100;&#97;&#110;&#105;&#101;&#108;&#101;&#46;&#100;&#97;&#118;&#105;&#110;&#111;&#64;&#108;&#105;&#118;&#101;&#46;&#105;&#116;">&#100;&#97;&#110;&#105;&#101;&#108;&#101;&#46;&#100;&#97;&#118;&#105;&#110;&#111;&#64;&#108;&#105;&#118;&#101;&#46;&#105;&#116;</a></p>
+</div>
+			<div class="footer">
+				<p>&copy; 2015-2020 Daniele D'Avino &bull; Built using <a href="https://blog.getpelican.com/" target="_blank">Pelican</a> &bull; Source available on <a href="">GitHub</a></p>
+			</div>
+		</div>
+	</body>
+</html>
