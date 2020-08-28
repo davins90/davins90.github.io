@@ -15,6 +15,7 @@ business intelligence to solve real business problems, following CRISP-DM proces
     - EDA
     - Information Retrival
     - Dataset Enrichment and Simulation
+    - Master thesis projects tutoring
 
 2016 - 2019 : **Digital Investiment Analyst** @ [AdviseOnly](https://www.adviseonly.com/){:target="_blank"}
 
@@ -100,24 +101,9 @@ Skills
 ----------------------------------------
 I developed an **agile working methodology** using the following tools:
 
-* *Proficient*
-     * Python
-     * GIT
-     * Azure ML
-     * Power BI
-     * Pelican
-     * HTML
-     * CSS
-     * Markdown
-     * Bloomberg Platform
+* *Proficient*: Python, GIT, Azure ML, Power BI, Pelican, HTML, CSS, Markdown, Bloomberg, Heroku, Streamlit.
 
-* *Familiar*
-    * C++
-    * SQL
-    * Matlab
-    * VBA
-    * R
-    * Tableau
+* *Familiar*: C++, SQL, Matlab, VBA, R, Tableau.
 
 Contact
 ----------

@@ -39,3 +39,16 @@ Static website based on Pelican and parked on Github.
 
 7) **Clustering example**
 
+
+
+8) **[Weekly financial markets performance](https://github.com/davins90/stock_market_data){:target="_blank"}**
+
+WebApp written in Python and Streamlit, deployed on Heroku for checking weekly financial markets performance.
+
+- Tags: `python`-`Streamlit`-`Heroku`
+
+9) **[Investment portfolios performance check](https://github.com/davins90/check_ptf){:target="_blank"}**
+
+WebApp written in Python and Streamlit, deployed on Heroku for checking performance of [AdviseOnly](adviseonly.com) investment portfolios.
+
+- Tags: `python`-`Streamlit`-`Heroku`
