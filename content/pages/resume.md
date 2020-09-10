@@ -16,6 +16,7 @@ business intelligence to solve real business problems, following CRISP-DM proces
     - Information Retrival
     - Dataset Enrichment and Simulation
     - Master thesis projects tutoring
+    - Webapp prototyping
 
 2016 - 2019 : **Digital Investiment Analyst** @ [AdviseOnly](https://www.adviseonly.com/){:target="_blank"}
 
@@ -25,7 +26,7 @@ Main tasks:
     - Portfolio construction
     - Portfolio simulation
     - Risk metrics
-    - Forecasting scenarios 
+    - Forecasting scenarios
 
 - Prepared report, analysis and wrote news about economics and financial thematic for financial blogs
 and banking institution.
@@ -39,7 +40,7 @@ Professional Certifications
   
   *Hot topics*: Querying and processing data, deploying supervised and unsupervised machine learning model,
 visualizing results and creating storytelling for data communication.
-    
+
   *Software*: Power BI, Azure ML, T-SQL, Python
 
   *Final project*: Developed supervised machine learning model for predicting county-level rents in US, given
@@ -50,11 +51,17 @@ socio-economic/demographic information.
   
   *Hot topics*: Processing data, deploying deep learning and reinforcement learning model for imagine
 recognition and classification tasks.
-    
+
   *Software*: Azure ML, Python
 
   *Final project*: Developed deep learning model (CNN) for classifying 11 types of appliances from their
 spectrogram, quantified by current and voltage measurements.
+
+**Deeplearning.ai**
+
+- [Structuring Machine Learning Projects](https://www.coursera.org/account/accomplishments/certificate/YV5UYWHPAS8L){:target="_blank"}
+  
+  *Hot topics*: Metrics Optimization, Error Analysis, Transfer learning
 
 Education
 ----------
