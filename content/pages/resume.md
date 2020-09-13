@@ -63,6 +63,12 @@ spectrogram, quantified by current and voltage measurements.
   
   *Hot topics*: Metrics Optimization, Error Analysis, Transfer learning
 
+**Google Cloud**
+
+- [Google Cloud Platform Fundamentals: Core Infrastructure](https://www.coursera.org/account/accomplishments/certificate/AVPCS7RXPQXA){:target="_blank"}
+  
+  *Hot topics*: Google Cloud Platform, Google App Engine
+
 Education
 ----------
 
