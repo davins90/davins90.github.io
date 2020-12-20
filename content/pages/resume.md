@@ -5,14 +5,12 @@ Title: Résumé
 Employment
 ---------
 
-2016 - Now : **Financial Data Scientist** @ [Virtual B](https://www.virtualb.it/){:target="_blank"}
+2016 - Now : **Data Scientist** @ [Virtual B](https://www.virtualb.it/){:target="_blank"}
 
 - Developed and managed a data driven wealth management platform applying machine learning and
-business intelligence to solve real business problems, following CRISP-DM process.
-    Main tasks: 
-    - Classification
-    - Clustering
-    - EDA
+BI, following CRISP-DM process.
+    Main tasks:
+    - Supervised & Unsupervised analysis on structured mixed data
     - Information Retrival
     - Dataset Enrichment and Simulation
     - Master thesis projects tutoring
@@ -36,7 +34,7 @@ Professional Certifications
 
 **Microsoft**
 
-- [Microsoft Professional Program in **Data Science**](https://academy.microsoft.com/en-us/certificates/0ce8e723-ac64-4e72-af05-ae2aa82828c1/){:target="_blank"}
+- [Microsoft Professional Program in **Data Science**](/pdf/MPP_DS.pdf){:target="_blank"}
   
   *Hot topics*: Querying and processing data, deploying supervised and unsupervised machine learning model,
 visualizing results and creating storytelling for data communication.
@@ -47,7 +45,7 @@ visualizing results and creating storytelling for data communication.
 socio-economic/demographic information.
 
 
-- [Microsoft Professional Program in **Artificial Intelligence**](https://academy.microsoft.com/en-us/certificates/240d56a1-7d17-4e9d-9c2b-24b8edaaf86b/){:target="_blank"}
+- [Microsoft Professional Program in **Artificial Intelligence**](/pdf/MPP_AI.pdf){:target="_blank"}
   
   *Hot topics*: Processing data, deploying deep learning and reinforcement learning model for imagine
 recognition and classification tasks.
@@ -96,7 +94,7 @@ Technical Experience
 
 Below is a list of the main projects i took part in.
 
-- 2020: Developing a customer clustering and classification software, useful for data enrichment and artificial markets solutions. *Software*: Python
+- 2020: Developing a customer clustering and classification software, useful for data enrichment, artificial markets solutions and for addressing better solutions to final customers. *Software*: Python
 
 - 2019: Developed a customer data analysis tool, integrated with machine learning algorithms, for wealth
 management institutions. *Software*: Python

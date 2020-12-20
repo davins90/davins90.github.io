@@ -5,7 +5,6 @@ save_as: index.html
 
 Welcome to my personal page. I'm a data scientist with a financial background. Here you can read and find information about:
 
-- myself (shockingly &#128517;);
 - my Github projects (completed and ongoing);
 - my articles about the world of data science and finance.
 
