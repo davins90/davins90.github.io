@@ -3,10 +3,7 @@ save_as: index.html
 
 ## Hi, I'm Daniele!  
 
-Welcome to my personal page. I'm a data scientist with a financial background. Here you can read and find information about:
-
-- my Github projects (completed and ongoing);
-- my articles about the world of data science and finance.
+Welcome to my personal page. I'm a data scientist with a financial quantitative background.
 
 
 ### How to describe me in one line?
@@ -15,9 +12,9 @@ Welcome to my personal page. I'm a data scientist with a financial background. H
 
 Through what can be considered as a constant Bayesian update of my skills, i've crossed seas of time series, oceans of macroeconomic reports and scaled portfolio construction models to get to the "base camp" of data science.
 
-Qualitative and quantitative data, information retrieval, translation of concepts into numbers...but also classifications, regressions, clustering, train, test...an exciting step forward in my path, equivalent of switching from 2D to augmented reality games!
+Qualitative and quantitative data, information retrieval, translation of concepts into numbers... but also classification, regression, clustering, training, testing... many steps of an exciting journey!
 
-Bayes permitting, this trip... continue!
+And, Bayes permitting, this journey... continues!
 
 ### Contact
 

@@ -53,3 +53,21 @@ WebApp written in Python and Streamlit, deployed on Heroku for checking weekly f
 WebApp written in Python and Streamlit, deployed on Heroku for checking performance of [AdviseOnly](adviseonly.com) investment portfolios.
 
 - Tags: `python`-`Streamlit`-`Heroku`
+
+10) **[Classification pipeline](https://github.com/davins90/classification_pipeline){:target="_blank"}**
+
+Classification example in a jupyter notebook.
+
+- Tags: `python`-`classification`
+
+11) **[Regression pipeline](https://github.com/davins90/regression_pipeline){:target="_blank"}**
+
+Regression example in a jupyter notebook.
+
+- Tags: `python`-`regression`
+
+12) **[Network analysis pipeline](https://github.com/davins90/network_analysis_pipeline){:target="_blank"}**
+
+Network analysis example in a jupyter notebook and in Streamlit at the following [link](https://sub-cab-network.herokuapp.com/).
+
+- Tags: `python`-`network-analysis`-`streamlit`-`heroku`

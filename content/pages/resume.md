@@ -7,12 +7,12 @@ Employment
 
 2016 - Now : **Data Scientist** @ [Virtual B](https://www.virtualb.it/){:target="_blank"}
 
-- Developed and managed a data driven wealth management platform applying machine learning and
-BI, following CRISP-DM process.
+- I'm contributing to the development and management of several machine learning solutions delivered either as services (via API), as products (via Docker), or as consulting projects, following CRISP-DM process.
     Main tasks:
     - Supervised & Unsupervised analysis on structured mixed data
-    - Information Retrival
+    - Bayesian programming
     - Dataset Enrichment and Simulation
+    - Network analysis
     - Master thesis projects tutoring
     - Webapp prototyping
 
@@ -21,10 +21,9 @@ BI, following CRISP-DM process.
 - Managed a wealth management digital platform on every field of the management flow (Engagement
 tools, profiling, asset allocation, risk analytics and CRM).
 Main tasks:
-    - Portfolio construction
-    - Portfolio simulation
-    - Risk metrics
+    - Portfolio construction & simulation
     - Forecasting scenarios
+    - Risk metrics
 
 - Prepared report, analysis and wrote news about economics and financial thematic for financial blogs
 and banking institution.
@@ -94,7 +93,9 @@ Technical Experience
 
 Below is a list of the main projects i took part in.
 
-- 2020: Developing a customer clustering and classification software, useful for data enrichment, artificial markets solutions and for addressing better solutions to final customers. *Software*: Python
+- 2021: Developing a transactional data software solution, based on quantiative analysis, clustering and network analysis tecnique. *Software*: Python
+
+- 2020: Developed a customer clustering and classification software, useful for data enrichment, artificial markets solutions and for addressing better solutions to final retail customers. *Software*: Python
 
 - 2019: Developed a customer data analysis tool, integrated with machine learning algorithms, for wealth
 management institutions. *Software*: Python
@@ -112,14 +113,14 @@ Skills
 ----------------------------------------
 I developed an **agile working methodology** using the following tools:
 
-* *Proficient*: Python, GIT, Azure ML, Power BI, Pelican, HTML, CSS, Markdown, Bloomberg, Heroku, Streamlit.
+* *Proficient*: Python, SQL, GIT, Markdown, Bloomberg, Heroku, Streamlit.
 
-* *Familiar*: C++, SQL, Matlab, VBA, R, Tableau.
+* *Familiar*: C++, Matlab, VBA, R, Tableau, Azure ML, Power BI, Pelican, HTML, CSS,
 
 Contact
 ----------
 
-&#127969;: Domodossola/Milano - Italy 
+&#127969;: Domodossola/Milano - Italy
 
 &#128241;: +393474375275
 
