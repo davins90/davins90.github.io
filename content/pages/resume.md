@@ -5,7 +5,7 @@ Title: Résumé
 Employment
 ---------
 
-2016 - Now : **Data Scientist** @ [Virtual B](https://www.virtualb.it/){:target="_blank"}
+June 2018 - Now : **Data Scientist** @ [Virtual B](https://www.virtualb.it/){:target="_blank"}
 
 - I'm contributing to the development and management of several machine learning solutions delivered either as services (via API), as products (via Docker), or as consulting projects, following CRISP-DM process.
     Main tasks:
@@ -16,7 +16,7 @@ Employment
     - Master thesis projects tutoring
     - Webapp prototyping
 
-2016 - 2019 : **Digital Investiment Analyst** @ [AdviseOnly](https://www.adviseonly.com/){:target="_blank"}
+Feb 2016 - June 2018 : **Digital Investiment Analyst** @ [AdviseOnly](https://www.adviseonly.com/){:target="_blank"}
 
 - Managed a wealth management digital platform on every field of the management flow (Engagement
 tools, profiling, asset allocation, risk analytics and CRM).
