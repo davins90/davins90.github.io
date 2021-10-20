@@ -7,7 +7,7 @@ Employment
 
 June 2018 - Now : **Data Scientist** @ [Virtual B](https://www.virtualb.it/){:target="_blank"}
 
-- I'm contributing to the development and management of several machine learning solutions delivered either as services (via API), as products (via Docker), or as consulting projects, following CRISP-DM process.
+- I'm contributing to the development and management of several machine learning solutions delivered either as services (via API), as products (via Docker), or as consulting projects, following CRISP-DM process in an MLOps infrastructure.
     Main tasks:
     - Supervised & Unsupervised analysis on structured mixed data
     - Bayesian programming
@@ -16,7 +16,7 @@ June 2018 - Now : **Data Scientist** @ [Virtual B](https://www.virtualb.it/){:ta
     - Master thesis projects tutoring
     - Webapp prototyping
 
-Feb 2016 - June 2018 : **Digital Investiment Analyst** @ [AdviseOnly](https://www.adviseonly.com/){:target="_blank"}
+Feb 2016 - June 2018 : **Quantitative Analyst** @ [AdviseOnly](https://www.adviseonly.com/){:target="_blank"}
 
 - Managed a wealth management digital platform on every field of the management flow (Engagement
 tools, profiling, asset allocation, risk analytics and CRM).
@@ -62,9 +62,9 @@ spectrogram, quantified by current and voltage measurements.
 
 **Google Cloud**
 
-- [Google Cloud Platform Fundamentals: Core Infrastructure](https://www.coursera.org/account/accomplishments/certificate/AVPCS7RXPQXA){:target="_blank"}
+- [Smart Analytics, Machine Learning and AI on Google Cloud Platform](https://coursera.org/share/12dafb1dc1214eb34afed5d2cc213879){:target="_blank"}
   
-  *Hot topics*: Google Cloud Platform, Google App Engine
+  *Hot topics*: Google Cloud Platform, Google App Engine, Machine Learning, Big Query
 
 Education
 ----------
@@ -108,14 +108,28 @@ Tableau
 - 2016: Developed a Web App for evaluating bond emission (yield and price) of the Italian landscape’ small
 cap (e.g. minibond). *Software*: Python, VBA
 
+In my [Github](https://github.com/davins90){:target="_blank"} profile you'll find some of my hobby projects:
+
+- **Meteo Adverse Classifier**: classification algorithm for predicting climate averse future conditions.
+
+- **Network Analysis Pipeline**: Analysis of submarine telecommunication network via graph theory.
+
+- **Stock Market Data**: tool for downloading stock market performance of the main worldwide indices.
+
+- **Accumulation Plan**: tool for simulating a financial accumulation plan over the years, with performance and some other stats.
+
+- **Churn Prediction**: classification algorithm for predicting churn risk for customers of an insurance company (this solution was built for a public challenge that reach 7th place on around 400 participants).
+
+- **Auto Traffic Prediction**: regression algorithm for predicting hourly traffic on an interstate in the US.
+
 
 Skills
 ----------------------------------------
 I developed an **agile working methodology** using the following tools:
 
-* *Proficient*: Python, SQL, GIT, Markdown, Bloomberg, Heroku, Streamlit.
+* *Proficient*: Python, SQL, GIT, Markdown, Bloomberg, Heroku, AWS, Streamlit.
 
-* *Familiar*: C++, Matlab, VBA, R, Tableau, Azure ML, Power BI, Pelican, HTML, CSS,
+* *Familiar*: C++, Matlab, VBA, R, Tableau, Azure ML, Power BI, Pelican, HTML, CSS
 
 Contact
 ----------

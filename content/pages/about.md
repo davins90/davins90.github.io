@@ -3,14 +3,14 @@ save_as: index.html
 
 ## Hi, I'm Daniele!  
 
-Welcome to my personal page. I'm a data scientist with a financial quantitative background.
+Welcome to my personal page. I'm a decision intelligence data scientist.
 
 
 ### How to describe me in one line?
 
 *Born quantitative analyst, raised data scientist!*
 
-Through what can be considered as a constant Bayesian update of my skills, i've crossed seas of time series, oceans of macroeconomic reports and scaled portfolio construction models to get to the "base camp" of data science.
+Through what can be considered as a constant Bayesian update of my skills, i've crossed seas of time series, oceans of macroeconomic reports and scaled portfolio optimization models to get to the "base camp" of data science.
 
 Qualitative and quantitative data, information retrieval, translation of concepts into numbers... but also classification, regression, clustering, training, testing... many steps of an exciting journey!
 
@@ -26,7 +26,7 @@ And, Bayes permitting, this journey... continues!
 
 | | | |
 | --- | --- | --- |
-| <i class="fa fa-linkedin"></i> | Linkedin | <https://www.linkedin.com/in/daniele-d-avino-a2678354/>{:target="_blank"} |
+| <i class="fa fa-linkedin"></i> | Linkedin | <https://www.linkedin.com/in/daniele-d-avino/>{:target="_blank"} |
 
 ### Code repositories
 
