@@ -22,7 +22,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Biography
-BIO = "Financial Data Scientist @ Virtual B"
+BIO = "Decision Intelligence Data Scientist @ Virtual B"
 PROFILE_IMAGE = 'avatar.png'
 
 
