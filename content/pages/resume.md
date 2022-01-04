@@ -56,9 +56,9 @@ spectrogram, quantified by current and voltage measurements.
 
 **Deeplearning.ai**
 
-- [Structuring Machine Learning Projects](https://www.coursera.org/account/accomplishments/certificate/YV5UYWHPAS8L){:target="_blank"}
+- [Deep Learning](https://coursera.org/share/f4ffbe4aa1e99fa4ac8527d37cfe5332){:target="_blank"}
   
-  *Hot topics*: Metrics Optimization, Error Analysis, Transfer learning
+  *Hot topics*: Deep Learning, Optimization, CNN, RNN, Structuring ML Projects
 
 **Google Cloud**
 
