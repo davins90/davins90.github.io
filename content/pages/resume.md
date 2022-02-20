@@ -5,7 +5,11 @@ Title: Résumé
 Employment
 ---------
 
-June 2018 - Now : **Data Scientist** @ [Virtual B](https://www.virtualb.it/){:target="_blank"}
+Feb 2022 - Now : **Data Scientist** @ [Sky (Comcast Group)](https://www.skygroup.sky/){:target="_blank"}
+
+- I'm contributing to the development, improvement and management of machine learning solutions (through optimization engines and Bayesian supervised and unsupervised analysis) for cybersecurity and anti-piracy related systems.
+
+June 2018 - Feb 2022 : **Data Scientist** @ [Virtual B](https://www.virtualb.it/){:target="_blank"}
 
 - I'm contributing to the development and management of several machine learning solutions delivered either as services (via API), as products (via Docker), or as consulting projects, following CRISP-DM process in an MLOps infrastructure.
     Main tasks:
