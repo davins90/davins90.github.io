@@ -22,7 +22,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Biography
-BIO = "Decision Intelligence Data Scientist @ Virtual B"
+BIO = "Decision Intelligence Data Scientist @ Sky (Comcast Group)"
 PROFILE_IMAGE = 'avatar.png'
 
 

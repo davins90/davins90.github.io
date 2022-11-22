@@ -131,9 +131,9 @@ Skills
 ----------------------------------------
 I developed an **agile working methodology** using the following tools:
 
-* *Proficient*: Python, SQL, GIT, Markdown, Bloomberg, Heroku, AWS, Streamlit.
+* *Proficient*: Python, SQL, GIT, Markdown, Google Cloud Product (Cloud Storage, Artifact, Vertex AI), Docker
 
-* *Familiar*: C++, Matlab, VBA, R, Tableau, Azure ML, Power BI, Pelican, HTML, CSS
+* *Familiar*: C++, Matlab, VBA, R, Tableau, AWS, Power BI, Pelican, HTML, CSS, Bloomberg
 
 Contact
 ----------
