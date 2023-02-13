@@ -5,9 +5,14 @@ Title: Résumé
 Employment
 ---------
 
-Feb 2022 - Now : **Data Scientist** @ [Sky (Comcast Group)](https://www.skygroup.sky/){:target="_blank"}
+Feb 2022 - Now : **Full Stack Data Scientist** @ [Sky (Comcast Group)](https://www.skygroup.sky/){:target="_blank"}
 
-- I'm contributing to the development, improvement and management of machine learning solutions (through optimization engines and Bayesian supervised and unsupervised analysis) for cybersecurity and anti-piracy related systems.
+- I'm contributing to the development, improvement and management of machine learning solutions (through optimization engines and Bayesian supervised and unsupervised analysis) for cybersecurity and anti-piracy related systems. I am involved in the following tasks:
+    - Development, centralization, and migration of web applications to the Cloud.
+    - Automation of internal processes.
+    - Enhancement of machine learning tools:
+        - computer vision: improving the accuracy of an object detection tool by 10%.
+        - network analysis: building knowledge graphs and clustering models for fraudulent activity monitoring.
 
 June 2018 - Feb 2022 : **Data Scientist** @ [Virtual B](https://www.virtualb.it/){:target="_blank"}
 
@@ -73,6 +78,13 @@ spectrogram, quantified by current and voltage measurements.
 Education
 ----------
 
+**Fourth Brain Machine Learning Engineer Curriculum**
+
+  *Hot topics*: Data-centric AI, AI application, MLOps, Artifical Intelligence, Machine Learning
+    
+  *Software*: Python, Docker, GCP, Airflow, Databricks
+
+
 **Università degli studi di Milano - Bicocca**
 
 - 2013 -2016 : **Master degree in Quantitative Finance**
@@ -113,6 +125,8 @@ Tableau
 cap (e.g. minibond). *Software*: Python, VBA
 
 In my [Github](https://github.com/davins90){:target="_blank"} profile you'll find some of my hobby projects:
+
+- **Decision Intelligence Application**: application for delivering fraud detection and clustering customers. Frontend in Streamlit, Backend with Fast API, deployed on GCP.
 
 - **Meteo Adverse Classifier**: classification algorithm for predicting climate averse future conditions.
 
