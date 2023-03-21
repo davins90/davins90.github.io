@@ -5,14 +5,15 @@ Title: Résumé
 Employment
 ---------
 
-Feb 2022 - Now : **Full Stack Data Scientist** @ [Sky (Comcast Group)](https://www.skygroup.sky/){:target="_blank"}
+Feb 2022 - Now : **Machine Learning Scientist** @ [Sky (Comcast Group)](https://www.skygroup.sky/){:target="_blank"}
 
 - I'm contributing to the development, improvement and management of machine learning solutions (through optimization engines and Bayesian supervised and unsupervised analysis) for cybersecurity and anti-piracy related systems. I am involved in the following tasks:
-    - Development, centralization, and migration of web applications to the Cloud.
-    - Automation of internal processes.
-    - Enhancement of machine learning tools:
-        - computer vision: improving the accuracy of an object detection tool by 10%.
-        - network analysis: building knowledge graphs and clustering models for fraudulent activity monitoring.
+    - Machine Learning side:
+        - improving the accuracy of an object detection tool (actual: +10%);
+        - developing speech recognition system with Transformers architecture and OCR for Video analysis;
+        - developing knowledge graphs and clustering models for fraudulent activity monitoring.
+    - Engineering side:
+        - Implementing a cloud migration strategy to automate internal processes and facilitate cross-functional collaboration among teams, leveraging microservices architecture with Docker containers and APIs (from VMs). Achieved a 30% reduction in execution time while improving logging management capabilities.
 
 June 2018 - Feb 2022 : **Data Scientist** @ [Virtual B](https://www.virtualb.it/){:target="_blank"}
 
@@ -158,4 +159,4 @@ Contact
 
 &#128231; : daniele.davino@live.it
 
-[Click here](/pdf/daniele_davino_CV.pdf) for a pdf version of my CV!
+[Click here](/pdf/cv_daniele_davino.pdf) for a pdf version of my CV!
