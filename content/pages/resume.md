@@ -11,11 +11,12 @@ Feb 2022 - Now : **Machine Learning Scientist** @ [Sky (Comcast Group)](https://
     - Machine Learning side:
         - improving the accuracy of an object detection tool (actual: +10%);
         - developing speech recognition system with Transformers architecture and OCR for Video analysis;
-        - developing knowledge graphs and clustering models for fraudulent activity monitoring.
+        - developing knowledge graphs and clustering models for fraudulent activity monitoring over OTT network.
     - Engineering side:
         - Implementing a cloud migration strategy to automate internal processes and facilitate cross-functional collaboration among teams, leveraging microservices architecture with Docker containers and APIs (from VMs). Achieved a 30% reduction in execution time while improving logging management capabilities.
+        - Code review and debug activity for my team.
 
-June 2018 - Feb 2022 : **Data Scientist** @ [Virtual B](https://www.virtualb.it/){:target="_blank"}
+June 2018 - Feb 2022 : **Data Scientist** @ [Wealthype](https://wealthype.ai/){:target="_blank"}
 
 - I'm contributing to the development and management of several machine learning solutions delivered either as services (via API), as products (via Docker), or as consulting projects, following CRISP-DM process in an MLOps infrastructure.
     Main tasks:
