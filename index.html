@@ -1,67 +1,508 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniele - Data Science & AI Expert</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daniele D'Avino — Senior Data Scientist</title>
+  <meta name="description" content="Senior Data Scientist specialized in Bayesian modeling and cloud-native ML systems on GCP.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --bg-card: #ffffff;
+      --text: #1c1917;
+      --text-secondary: #78716c;
+      --text-tertiary: #a8a29e;
+      --accent: #b45309;
+      --accent-light: #fef3c7;
+      --border: #e7e5e4;
+      --border-hover: #d6d3d1;
+      --tag-bg: #f5f5f4;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+      --mono: 'JetBrains Mono', monospace;
+      --sans: 'DM Sans', -apple-system, sans-serif;
+      --radius: 10px;
+      --max-w: 720px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    .site-wrap {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 56px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .top-bar-logo {
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+    }
+    .top-bar-links { display: flex; gap: 6px; }
+    .top-bar-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 6px;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+    }
+    .top-bar-links a:hover { color: var(--text); background: var(--tag-bg); }
+    .hero { margin-bottom: 56px; }
+    .hero h1 { font-size: 36px; font-weight: 600; letter-spacing: -0.5px; line-height: 1.15; margin-bottom: 8px; }
+    .hero-title-role { font-size: 18px; font-weight: 400; color: var(--text-secondary); margin-bottom: 4px; }
+    .hero-tagline { font-family: var(--mono); font-size: 13px; color: var(--accent); letter-spacing: 0.3px; margin-bottom: 20px; }
+    .hero-summary { font-size: 15px; color: var(--text-secondary); line-height: 1.7; max-width: 600px; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 20px; font-size: 13px; color: var(--text-tertiary); }
+    .hero-meta span { display: flex; align-items: center; gap: 5px; }
+    .hero-actions { display: flex; gap: 10px; margin-top: 24px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 500; font-family: var(--sans); text-decoration: none; cursor: pointer; transition: all 0.2s; border: none; }
+    .btn-primary { background: var(--text); color: var(--bg); }
+    .btn-primary:hover { background: #292524; transform: translateY(-1px); box-shadow: var(--shadow-md); }
+    .btn-ghost { background: transparent; color: var(--text-secondary); border: 1px solid var(--border); }
+    .btn-ghost:hover { border-color: var(--border-hover); color: var(--text); background: var(--bg-card); }
+    .section { margin-bottom: 48px; }
+    .section-header { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+    .section-label { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-tertiary); }
+    .exp-item { padding: 24px 0; border-bottom: 1px solid var(--border); }
+    .exp-item:last-child { border-bottom: none; }
+    .exp-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4px; flex-wrap: wrap; gap: 8px; }
+    .exp-role { font-size: 18px; font-weight: 600; letter-spacing: -0.2px; }
+    .exp-company { color: var(--accent); font-weight: 600; font-size: 18px; }
+    .exp-period { font-family: var(--mono); font-size: 13px; color: var(--text-secondary); white-space: nowrap; font-weight: 500; letter-spacing: 0.2px; }
+    .exp-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.65; margin-top: 8px; margin-bottom: 4px; }
+    .exp-highlights { list-style: none; padding: 0; margin-top: 10px; }
+    .exp-highlights li { font-size: 13.5px; color: var(--text-secondary); line-height: 1.65; padding: 3px 0 3px 16px; position: relative; }
+    .exp-highlights li::before { content: ''; position: absolute; left: 0; top: 12px; width: 4px; height: 4px; border-radius: 50%; background: var(--text-tertiary); }
+    .exp-highlights li strong { color: var(--text); font-weight: 500; }
+    .exp-desc strong { color: var(--text); font-weight: 500; }
+    .exp-highlights li a { color: var(--accent); text-decoration: none; }
+    .exp-highlights li a:hover { text-decoration: underline; }
+    .exp-highlights li a strong { color: var(--accent); }
+    .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 560px) { .projects-grid { grid-template-columns: 1fr; } }
+    .project-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; transition: all 0.25s; cursor: pointer; text-decoration: none; color: inherit; display: flex; flex-direction: column; gap: 8px; }
+    .project-card:hover { border-color: var(--border-hover); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .project-card-top { display: flex; justify-content: space-between; align-items: flex-start; }
+    .project-name { font-size: 15px; font-weight: 600; line-height: 1.3; }
+    .project-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.55; flex: 1; }
+    .project-tag { font-family: var(--mono); font-size: 11px; color: var(--text-tertiary); letter-spacing: 0.3px; }
+    .skills-grid { display: flex; flex-direction: column; gap: 16px; }
+    .skill-row { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+    .skill-cat { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 0.3px; min-width: 180px; flex-shrink: 0; }
+    .skill-items { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+    .certs-list { display: flex; flex-direction: column; gap: 8px; }
+    .cert-item { font-size: 14px; color: var(--text-secondary); padding: 8px 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; display: flex; align-items: center; gap: 10px; text-decoration: none; transition: all 0.2s; }
+    .cert-item:hover { border-color: var(--border-hover); box-shadow: var(--shadow-sm); }
+    .cert-badge { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+    .edu-block { font-size: 15px; color: var(--text-secondary); padding: 16px 0 0; }
+    .site-footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--text-tertiary); }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-in { animation: fadeIn 0.5s ease-out both; }
+    .d1 { animation-delay: 0.05s; } .d2 { animation-delay: 0.1s; } .d3 { animation-delay: 0.15s; }
+    .d4 { animation-delay: 0.2s; } .d5 { animation-delay: 0.25s; } .d6 { animation-delay: 0.3s; } .d7 { animation-delay: 0.35s; }
+  </style>
 </head>
 <body>
-    <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <nav>
-        <a href="index.html" class="active">Home</a>
-        <a href="cv.html">CV</a>
-        <a href="blog.html">Blog</a>
+<div class="site-wrap" id="app"></div>
+<script>
+// ============================================================
+//  CV_DATA — EDIT YOUR CONTENT HERE
+//
+//  Highlights support two formats:
+//    String:  "Some **bold** text here."
+//    Object:  { text: "Some **bold** text.", url: "https://..." }
+// ============================================================
+
+const CV_DATA = {
+  name: "Daniele D'Avino",
+  title: "Senior Data Scientist for Decision Making",
+  tagline: "ML · Bayesian Modeling · GCP",
+
+  contact: {
+    email: "daniele.davino12@gmail.com",
+    phone: "+393474375275",
+    location: "Milano, Italy",
+    linkedin: { label: "LinkedIn", url: "https://linkedin.com/in/daniele-davino" },
+    github: { label: "GitHub", url: "https://github.com/davins90" },
+    website: { label: "Website", url: "https://danidavino.com" },
+  },
+
+  summary: "Senior Data Scientist specialized in Bayesian modeling and cloud-native ML systems on GCP. Background in quantitative finance, with production experience across cybersecurity, fintech, and enterprise AI. Track record of building end-to-end ML solutions — from anomaly detection to agentic AI — that drive measurable cost reduction and operational efficiency.",
+
+  experience: [
+    {
+      role: "Senior Data Scientist",
+      company: "Huware",
+      location: "Milano",
+      period: "08/2025 – present",
+      description: "Designing **data science solutions** and **ML pipelines** on GCP, translating business problems into production-ready systems.",
+      highlights: [
+        "**Predictive analytics** pipelines — customer loyalty scoring, demand forecasting, and churn prediction for automotive and retail clients.",
+        "**Anomaly detection** — real-time monitoring and risk scoring systems for e-commerce order management.",
+        "**Agentic AI** solutions — built **agent-based framework** with Google ADK for automated **order entry** and **document Q&A**.",
+      ],
+    },
+    {
+      role: "Senior Data Scientist",
+      company: "Sky Group",
+      location: "Milano",
+      period: "02/2022 – 08/2025",
+      description: "Delivered **data science and ML solutions** for **anti-piracy and cybersecurity** across Sky Group's European markets, working within a cross-functional international team.",
+      highlights: [
+        "Built and deployed **ML suite** detecting illicit streaming behavior across broadcast networks, achieving **60% improvement** in detection accuracy.",
+        "Developed **semi-supervised Bayesian models** for anomaly detection with limited labeled data, reducing manual review time by **45%**.",
+        "Created **Generative AI tools** for automated content analysis and **computer vision** tasks, reducing investigation time by **50%**.",
+        "Applied **operations research** techniques (Integer Linear Programming, object detection optimization) to improve model accuracy by **10%** while cutting infrastructure costs by **30%**.",
+        "Led **cloud migration** from local VMs to GCP microservices architecture, achieving **40% faster** execution and enhanced monitoring capabilities.",
+        "Conducted **code reviews** and supported team members, ensuring robust delivery.",
+      ],
+    },
+    {
+      role: "Data Scientist",
+      company: "Wealthype",
+      location: "Milano",
+      period: "06/2018 – 02/2022",
+      description: "Developed and maintained **machine learning applications** for both supervised and unsupervised analysis on mixed structured data. Led data enrichment, simulation, and **optimization** solutions using a **Bayesian programming framework**.",
+      highlights: [
+        "ML applications for **wealth management** sector that resulted in an average **5% increase** in customer profitability.",
+        { text: "International **PATENT** about customized **financial portfolio construction** method.", url: "https://patentscope.wipo.int/search/en/detail.jsf?docId=WO2023089554&_cid=P11-LX59YG-74561-1" },
+      ],
+    },
+    {
+      role: "Quantitative Analyst",
+      company: "AdviseOnly",
+      location: "Milano",
+      period: "02/2016 – 06/2018",
+      description: "Worked on the **digital asset management** platform developing and managing **quantitative investment strategies** for different customer financial goals.",
+      highlights: [
+        "Developed **Bayesian Risk Model** to evaluate Italian Bond market.",
+      ],
+    },
+  ],
+
+  projects: [
+    {
+      name: "ThoughtLink BCI",
+      desc: "Bayesian EEG classification for uncertainty-aware humanoid robot control, with PyMC and MC Dropout CNN.",
+      tag: "Hackathon · Kernel & Dimensional",
+      url: "https://github.com/davins90/thoughtlink-bci",
+    },
+    {
+      name: "Decision Intelligence App",
+      desc: "WebApp on GCP for fraud detection and customer clustering.",
+      tag: "GCP · ML · Streamlit",
+      url: "https://github.com/davins90/unsupervised_anomaly_detection",
+    },
+    {
+      name: "Meteo Adverse Classifier",
+      desc: "Classification algorithm for predicting adverse climate conditions with Open Data.",
+      tag: "Classification · Open Data",
+      url: "https://github.com/davins90/meteo_adverse_classifier",
+    },
+    {
+      name: "Network Analysis Pipeline",
+      desc: "Submarine telecommunication network analysis via graph theory.",
+      tag: "Graph Theory · Network Analysis",
+      url: "https://github.com/davins90/network_analysis_pipeline",
+    },
+  ],
+
+  skills: {
+    "Programming & Cloud": "Python (Scikit-learn, PyTorch, Pandas), SQL, GCP (Vertex AI, BigQuery, Cloud Run, ADK), Docker, Git, Kubeflow, Terraform",
+    "ML & AI": "Regression, Classification, Clustering, Anomaly Detection, NLP, GenAI/LLMs, Embeddings, Factor Analysis, Network Analysis",
+    "Statistics & Optimization": "Bayesian Statistics, Operations Research, Simulation, Graph Theory",
+  },
+
+  certifications: [
+    { label: "Professional ML Engineer — Google Cloud", url: "https://www.credly.com/badges/90718dce-e671-4f37-a8d6-391e3e3d70b0" },
+    { label: "Generative AI Leader — Google Cloud", url: "https://www.credly.com/badges/db4249d2-0901-4043-99ab-864e5e371431" },
+    { label: "ML Engineering Curriculum — FourthBrain.ai", url: "https://www.linkedin.com/in/daniele-d-avino/overlay/education/854220748/multiple-media-viewer/?profileId=ACoAAAuBNf4Bv3yuFD3V8atLC4286uPUa4eqgmw&treasuryMediaId=1635518320160&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B%2Bgyoz8ojS5aT9%2Bol0c5OuA%3D%3D" },
+    { label: "Cybersecurity Professional — Google Coursera", url: "https://www.credly.com/badges/a78db000-7a61-425e-a27a-a93e2425e488/linked_in_profile" },
+  ],
+
+  education: "M.Sc. Quantitative Finance — Università degli Studi di Milano-Bicocca",
+};
+
+// ============================================================
+//  RENDERING
+// ============================================================
+
+function boldParse(text) { return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>'); }
+function stripBold(text) { return text.replace(/\*\*(.*?)\*\*/g, '$1'); }
+function getHighlightText(h) { return typeof h === 'string' ? h : h.text; }
+function getHighlightUrl(h) { return (typeof h === 'object' && h.url) ? h.url : null; }
+
+function renderHighlight(h) {
+  const text = getHighlightText(h);
+  const url = getHighlightUrl(h);
+  const parsed = boldParse(text);
+  if (url) return '<li><a href="' + url + '" target="_blank" rel="noopener">' + parsed + '</a></li>';
+  return '<li>' + parsed + '</li>';
+}
+
+function render() {
+  const d = CV_DATA;
+  const c = d.contact;
+  document.getElementById('app').innerHTML = `
+    <nav class="top-bar fade-in d1">
+      <div class="top-bar-logo">d.davino</div>
+      <div class="top-bar-links">
+        <a href="${c.github.url}" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+        <a href="${c.linkedin.url}" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="mailto:${c.email}"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+      </div>
     </nav>
-    <header>
-        <div>
-            <h1>Daniele D'Avino</h1>
-            <h2>Data Science & AI Expert for Decision Making</h2>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/daniele-d-avino/" target="_blank" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-                </a>
-                <a href="https://github.com/davins90" target="_blank" aria-label="GitHub">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-                </a>
-                <a href="mailto:daniele.davino12@gmail.com" aria-label="Email">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
-                </a>
-                <a href="https://x.com/DAvinoDaniele" target="_blank" aria-label="X (Twitter)">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
-                </a>
-            </div>
+    <section class="hero fade-in d2">
+      <h1>${d.name}</h1>
+      <div class="hero-title-role">${d.title}</div>
+      <div class="hero-tagline">${d.tagline}</div>
+      <p class="hero-summary">${d.summary}</p>
+      <div class="hero-meta">
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> ${c.location}</span>
+        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> ${c.email}</span>
+      </div>
+      <div class="hero-actions">
+        <button class="btn btn-primary" onclick="generatePDF()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Download CV</button>
+        <a class="btn btn-ghost" href="mailto:${c.email}">Get in touch <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></a>
+      </div>
+    </section>
+    <section class="section fade-in d3">
+      <div class="section-header"><span class="section-label">Experience</span></div>
+      ${d.experience.map(exp => `
+        <div class="exp-item">
+          <div class="exp-top">
+            <div><span class="exp-role">${exp.role}</span><span class="exp-company"> · ${exp.company}</span></div>
+            <span class="exp-period">${exp.period}</span>
+          </div>
+          ${exp.description ? `<p class="exp-desc">${boldParse(exp.description)}</p>` : ''}
+          <ul class="exp-highlights">${exp.highlights.map(h => renderHighlight(h)).join('')}</ul>
         </div>
-    </header>
+      `).join('')}
+    </section>
+    <section class="section fade-in d4">
+      <div class="section-header"><span class="section-label">Projects</span></div>
+      <div class="projects-grid">
+        ${d.projects.map(p => `
+          <a class="project-card" href="${p.url}" target="_blank" rel="noopener">
+            <div class="project-card-top">
+              <span class="project-name">${p.name}</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </div>
+            <span class="project-desc">${p.desc}</span>
+            <span class="project-tag">${p.tag}</span>
+          </a>
+        `).join('')}
+      </div>
+    </section>
+    <section class="section fade-in d5">
+      <div class="section-header"><span class="section-label">Skills</span></div>
+      <div class="skills-grid">
+        ${Object.entries(d.skills).map(([cat, items]) => `
+          <div class="skill-row"><span class="skill-cat">${cat}</span><span class="skill-items">${items}</span></div>
+        `).join('')}
+      </div>
+    </section>
+    <section class="section fade-in d6">
+      <div class="section-header"><span class="section-label">Certifications & Education</span></div>
+      <div class="certs-list">
+        ${d.certifications.map(c => `
+          <a class="cert-item" href="${c.url}" target="_blank" rel="noopener" style="color:inherit;">
+            <div class="cert-badge"></div>${c.label}
+          </a>
+        `).join('')}
+      </div>
+      <div class="edu-block">🎓 ${d.education}</div>
+    </section>
+    <footer class="site-footer fade-in d7">
+      <span>© ${new Date().getFullYear()} Daniele D'Avino</span>
+      <span style="font-family:var(--mono);font-size:11px">Built with purpose.</span>
+    </footer>
+  `;
+}
 
-    <div class="separator"></div>
+// ============================================================
+//  PDF GENERATION
+// ============================================================
 
-    <main>
-        <p>Ciao, I'm Daniele!</p>
-        <p>I'm a Machine Learning Engineer with a deep passion for transforming data into actionable insights and cloud-based AI solutions.</p>
-        <p>How would I describe my professional evolution? Think of it as a perpetual Bayesian update of my skills. From delving into the depths of complex datasets to navigating the intricacies of cloud computing, I've embarked on a thrilling journey in the world of machine learning and AI.</p>
-        <p>My path has been a blend of qualitative and quantitative explorations. I've journeyed through the realms of statistical modeling, traversed the landscapes of machine learning algorithms, and now find myself at the forefront of cloud technology, especially within the Google Cloud Platform.</p>
-        <p>I'm not just about crunching numbers or coding algorithms. It's about translating complex concepts into tangible solutions, mastering classification, regression, clustering, and beyond. Every step is an exciting adventure in decoding the language of data.</p>
-        <p>Equipped with Python, SQL, GIT, Docker, and more, I navigate these challenges with the curiosity of a quantitative analyst and the expertise of a seasoned data scientist.</p>
-        <p>And as Bayes would have it, my journey is far from over. It's an ongoing quest to innovate, solve problems, and build bridges between technology and business strategy. Here's to continuing this incredible journey with creativity, collaboration, and a touch of Bayesian flair!</p>
-    </main>
+function generatePDF() {
+  if (window.jspdf) { _buildPDF(); }
+  else {
+    const s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js';
+    s.onload = () => _buildPDF();
+    s.onerror = () => alert('Could not load PDF library. Please try again.');
+    document.head.appendChild(s);
+  }
+}
 
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('nav').classList.toggle('active');
-        });
-        var currentPage = window.location.pathname.split("/").pop();
-        var navLinks = document.querySelectorAll('nav a');
-        navLinks.forEach(function(link) {
-            if (link.getAttribute('href') === currentPage) {
-                link.classList.add('active');
-            }
-        });
-    </script>
+function _buildPDF() {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ unit: 'mm', format: 'a4' });
+  const d = CV_DATA;
+  const c = d.contact;
+  const W = 210, marginL = 15, marginR = 15, contentW = W - marginL - marginR;
+  let y = 14;
+
+  const setFont = (style, size) => { doc.setFont('helvetica', style); doc.setFontSize(size); };
+  const black = [28, 25, 23], gray = [87, 83, 78], lightGray = [120, 113, 108], accent = [180, 83, 9];
+
+  const writeBoldText = (text, x, yPos, maxW, lineH, linkUrl) => {
+    const segments = [];
+    const parts = text.split(/\*\*(.*?)\*\*/g);
+    parts.forEach((part, i) => { if (part !== '') segments.push({ text: part, bold: i % 2 === 1 }); });
+    let curX = x, curY = yPos;
+    segments.forEach(seg => {
+      seg.text.split(/(\s+)/).forEach(word => {
+        if (word === '') return;
+        if (seg.bold) { setFont('bold', doc.getFontSize()); doc.setTextColor(...(linkUrl ? accent : black)); }
+        else { setFont('normal', doc.getFontSize()); doc.setTextColor(...(linkUrl ? accent : gray)); }
+        const wordW = doc.getTextWidth(word);
+        if (curX + wordW > x + maxW && word.trim() !== '') { curX = x; curY += lineH; }
+        if (linkUrl) doc.textWithLink(word, curX, curY, { url: linkUrl });
+        else doc.text(word, curX, curY);
+        curX += wordW;
+      });
+    });
+    return curY + lineH;
+  };
+
+  const writeText = (text, x, yPos, maxW, lineH) => {
+    const lines = doc.splitTextToSize(text, maxW);
+    doc.text(lines, x, yPos);
+    return yPos + lines.length * lineH;
+  };
+
+  const sectionTitle = (title, yPos) => {
+    setFont('bold', 9); doc.setTextColor(...black);
+    doc.text(title.toUpperCase(), marginL, yPos);
+    doc.setDrawColor(214, 211, 209); doc.setLineWidth(0.3);
+    doc.line(marginL + doc.getTextWidth(title.toUpperCase()) + 2, yPos - 0.5, W - marginR, yPos - 0.5);
+    return yPos + 5;
+  };
+
+  // HEADER
+  setFont('bold', 18); doc.setTextColor(...black);
+  doc.text(d.name.toUpperCase(), W / 2, y, { align: 'center' }); y += 6;
+  setFont('normal', 8.5); doc.setTextColor(...lightGray);
+  doc.text(d.title.toUpperCase(), W / 2, y, { align: 'center', charSpace: 1.5 }); y += 5;
+  setFont('normal', 8); doc.setTextColor(...gray);
+  doc.text(`${c.location} | ${c.phone} | ${c.email}`, W / 2, y, { align: 'center' }); y += 4;
+
+  const links = [c.linkedin, c.github, c.website];
+  setFont('bold', 8); doc.setTextColor(...accent);
+  const totalLinkW = doc.getTextWidth(links.map(l => l.label).join('  |  '));
+  let linkX = (W - totalLinkW) / 2;
+  links.forEach((link, i) => {
+    doc.setTextColor(...accent);
+    doc.textWithLink(link.label, linkX, y, { url: link.url });
+    linkX += doc.getTextWidth(link.label);
+    if (i < links.length - 1) {
+      doc.setTextColor(...lightGray);
+      doc.text('  |  ', linkX, y);
+      linkX += doc.getTextWidth('  |  ');
+    }
+  });
+  y += 3;
+  doc.setDrawColor(28, 25, 23); doc.setLineWidth(0.5);
+  doc.line(marginL, y, W - marginR, y); y += 5;
+
+  // SUMMARY
+  y = sectionTitle('Summary', y);
+  setFont('normal', 8); doc.setTextColor(...gray);
+  y = writeText(d.summary, marginL, y, contentW, 3.5); y += 4;
+
+  // SKILLS
+  y = sectionTitle('Skills', y);
+  Object.entries(d.skills).forEach(([cat, items]) => {
+    setFont('bold', 8); doc.setTextColor(...black);
+    doc.text(cat + ': ', marginL, y);
+    const catW = doc.getTextWidth(cat + ': ');
+    setFont('normal', 8); doc.setTextColor(...gray);
+    y = writeText(items, marginL + catW, y, contentW - catW, 3.5); y += 1;
+  });
+  y += 3;
+
+  // EXPERIENCE
+  y = sectionTitle('Work Experience', y);
+  d.experience.forEach(exp => {
+    setFont('bold', 9); doc.setTextColor(...black);
+    doc.text(exp.role, marginL, y);
+    setFont('bold', 8); doc.setTextColor(...lightGray);
+    doc.text(exp.period, W - marginR, y, { align: 'right' }); y += 3.5;
+    setFont('italic', 8); doc.setTextColor(...gray);
+    doc.text(exp.company + ', ' + exp.location, marginL, y); y += 3.5;
+    if (exp.description) {
+      setFont('normal', 7.5); doc.setTextColor(...gray);
+      y = writeBoldText(exp.description, marginL, y, contentW, 3.2, null); y += 1;
+    }
+    exp.highlights.forEach(h => {
+      const text = getHighlightText(h);
+      const url = getHighlightUrl(h);
+      setFont('normal', 7.5); doc.setTextColor(...gray);
+      doc.text('•', marginL + 1, y);
+      y = writeBoldText(text, marginL + 5, y, contentW - 5, 3.2, url); y += 0.5;
+    });
+    y += 3;
+  });
+
+  // PROJECTS + CERTS
+  const colW = contentW / 2 - 3, col1X = marginL, col2X = marginL + colW + 6, startY = y;
+
+  let yL = startY;
+  setFont('bold', 9); doc.setTextColor(...black);
+  doc.text('PROJECTS', col1X, yL);
+  doc.setDrawColor(214, 211, 209); doc.setLineWidth(0.3);
+  doc.line(col1X + doc.getTextWidth('PROJECTS') + 2, yL - 0.5, col1X + colW, yL - 0.5); yL += 4;
+  d.projects.forEach(p => {
+    setFont('bold', 7.5);
+    if (p.url && p.url !== '#') { doc.setTextColor(...accent); doc.textWithLink(p.name + ':', col1X, yL, { url: p.url }); }
+    else { doc.setTextColor(...black); doc.text(p.name + ':', col1X, yL); }
+    yL += 3;
+    setFont('normal', 7); doc.setTextColor(...gray);
+    yL = writeText(p.desc, col1X, yL, colW, 2.8); yL += 2;
+  });
+
+  let yR = startY;
+  setFont('bold', 9); doc.setTextColor(...black);
+  doc.text('CERTIFICATIONS', col2X, yR);
+  doc.line(col2X + doc.getTextWidth('CERTIFICATIONS') + 2, yR - 0.5, col2X + colW, yR - 0.5); yR += 4;
+  d.certifications.forEach(cert => {
+    setFont('normal', 7.5);
+    if (cert.url && cert.url !== '#') { doc.setTextColor(...accent); doc.textWithLink('•  ' + cert.label, col2X, yR, { url: cert.url }); }
+    else { doc.setTextColor(...gray); doc.text('•  ' + cert.label, col2X, yR); }
+    yR += 3.5;
+  });
+  yR += 3;
+  setFont('bold', 9); doc.setTextColor(...black);
+  doc.text('EDUCATION', col2X, yR);
+  doc.line(col2X + doc.getTextWidth('EDUCATION') + 2, yR - 0.5, col2X + colW, yR - 0.5); yR += 4;
+  setFont('normal', 7.5); doc.setTextColor(...gray);
+  writeText(d.education, col2X, yR, colW, 3.2);
+
+  doc.save('cv_daniele_davino.pdf');
+}
+
+render();
+</script>
 </body>
 </html>
