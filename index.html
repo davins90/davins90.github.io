@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/3.0.3/jspdf.umd.min.js"></script>
   <style>
     :root {
       --bg: #fafaf9;
@@ -142,7 +142,7 @@ const CV_DATA = {
     email: "daniele.davino12@gmail.com",
     phone: "+393474375275",
     location: "Milano, Italy",
-    linkedin: { label: "LinkedIn", url: "https://linkedin.com/in/daniele-davino" },
+    linkedin: { label: "LinkedIn", url: "https://www.linkedin.com/in/daniele-d-avino/" },
     github: { label: "GitHub", url: "https://github.com/davins90" },
     website: { label: "Website", url: "https://danidavino.com" },
   },
@@ -236,7 +236,7 @@ const CV_DATA = {
   certifications: [
     { label: "Professional ML Engineer — Google Cloud", url: "https://www.credly.com/badges/90718dce-e671-4f37-a8d6-391e3e3d70b0" },
     { label: "Generative AI Leader — Google Cloud", url: "https://www.credly.com/badges/db4249d2-0901-4043-99ab-864e5e371431" },
-    { label: "ML Engineering Curriculum — FourthBrain.ai", url: "https://www.linkedin.com/in/daniele-d-avino/overlay/education/854220748/multiple-media-viewer/?profileId=ACoAAAuBNf4Bv3yuFD3V8atLC4286uPUa4eqgmw&treasuryMediaId=1635518320160&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B%2Bgyoz8ojS5aT9%2Bol0c5OuA%3D%3D" },
+    { label: "ML Engineering Curriculum — FourthBrain.ai", url: "https://www.linkedin.com/in/daniele-d-avino/overlay/education/854220748/multiple-media-viewer/?profileId=ACoAAAuBNf4Bv3yuFD3V8atLC4286uPUa4eqgmw&treasuryMediaId=1635518899659&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B%2Bgyoz8ojS5aT9%2Bol0c5OuA%3D%3D" },
     { label: "Cybersecurity Professional — Google Coursera", url: "https://www.credly.com/badges/a78db000-7a61-425e-a27a-a93e2425e488/linked_in_profile" },
   ],
 
@@ -348,7 +348,7 @@ function generatePDF() {
   if (window.jspdf) { _buildPDF(); }
   else {
     const s = document.createElement('script');
-    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js';
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/3.0.3/jspdf.umd.min.js';
     s.onload = () => _buildPDF();
     s.onerror = () => alert('Could not load PDF library. Please try again.');
     document.head.appendChild(s);
