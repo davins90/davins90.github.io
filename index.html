@@ -404,7 +404,12 @@ function _buildPDF() {
   setFont('bold', 18); doc.setTextColor(...black);
   doc.text(d.name.toUpperCase(), W / 2, y, { align: 'center' }); y += 6;
   setFont('normal', 8.5); doc.setTextColor(...lightGray);
-  doc.text(d.title.toUpperCase(), W / 2, y, { align: 'center', charSpace: 1.5 }); y += 5;
+  // NUOVO
+  const titleText = d.title.toUpperCase();
+  const titleCharSpace = 1.5;
+  const titleWidth = doc.getTextWidth(titleText) + (titleText.length - 1) * titleCharSpace;
+  doc.text(titleText, (W - titleWidth) / 2, y, { charSpace: titleCharSpace });
+  y += 5; 
   setFont('normal', 8); doc.setTextColor(...gray);
   doc.text(`${c.location} | ${c.phone} | ${c.email}`, W / 2, y, { align: 'center' }); y += 4;
 
